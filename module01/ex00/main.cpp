@@ -5,11 +5,8 @@
 int main()
 {
 	Zombie *z = newZombie("HI");
-
-	std::cout << z->getName() << std::endl;
-
+	z->announce() ;
 	delete z;
-
-	//randomChump("HI");
+	randomChump("HI");
 	return 0;
 }

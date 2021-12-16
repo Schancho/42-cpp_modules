@@ -5,7 +5,8 @@
 int main()
 {
     Karen c;
-    c.complain("info");
     c.complain("debug");
+    c.complain("info");
+    c.complain("warning");
     c.complain("error");
 }

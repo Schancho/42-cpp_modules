@@ -14,13 +14,13 @@ int main(int ac, char **av)
     std::string s2(av[3]);
     std::ifstream file(av[1]);
     std::ofstream name;
-     int pos;
+    int pos;
 
     fileName.append(".replace");
     name.open(fileName);
     if (!file.is_open() || !name.is_open())
     {
-        std::cout << "Error: file \"" << av[1] << "\" does not exist" << std::endl;
+        std::cout << "File error "  << std::endl;
         exit(1);
     }
     while (std::getline(file, line))
@@ -30,9 +30,7 @@ int main(int ac, char **av)
             line = line.erase(pos, s1.length());
             line.insert(pos, s2);    
         }
-        name << line;
-        if (line[0])
-            name << std::endl;
+        name << line << std::endl;
     }
     name.close();
     file.close();

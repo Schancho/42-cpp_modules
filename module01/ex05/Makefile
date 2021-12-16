@@ -1,7 +1,7 @@
-NAME	= replace
+NAME	= Karen
 CC		= clang++ --std=c++98
 FLAGS	= #-Wall -Werror -Wextra
-SRCS 	= main.cpp 
+SRCS 	= main.cpp karen.cpp
 
 $(NAME):
 	@$(CC) $(FLAGS) $(SRCS) -o $(NAME)
