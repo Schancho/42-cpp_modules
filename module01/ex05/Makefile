@@ -1,6 +1,6 @@
 NAME	= Karen
 CC		= clang++ --std=c++98
-FLAGS	= #-Wall -Werror -Wextra
+FLAGS	= -Wall -Werror -Wextra
 SRCS 	= main.cpp karen.cpp
 
 $(NAME):

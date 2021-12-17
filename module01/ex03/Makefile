@@ -1,6 +1,6 @@
 NAME	= war
 CC		= clang++ --std=c++98
-FLAGS	= #-Wall -Werror -Wextra
+FLAGS	= -Wall -Werror -Wextra
 SRCS 	=  Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
 
 $(NAME):

@@ -1,7 +1,7 @@
-NAME	= replace
+NAME	= Fixed
 CC		= clang++ --std=c++98
 FLAGS	= -Wall -Werror -Wextra
-SRCS 	= main.cpp 
+SRCS 	= Fixed.cpp  main.cpp 
 
 $(NAME):
 	@$(CC) $(FLAGS) $(SRCS) -o $(NAME)

@@ -15,7 +15,6 @@ int main(int ac, char **av)
     std::ifstream file(av[1]);
     std::ofstream name;
     int pos;
-
     fileName.append(".replace");
     name.open(fileName);
     if (!file.is_open() || !name.is_open())

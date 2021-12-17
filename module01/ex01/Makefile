@@ -1,6 +1,6 @@
 NAME	= zombieHorde
 CC		= clang++ --std=c++98
-FLAGS	= #-Wall -Werror -Wextra
+FLAGS	= -Wall -Werror -Wextra
 SRCS 	= main.cpp zombieHorde.cpp  Zombie.cpp
 
 $(NAME):
