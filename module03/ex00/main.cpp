@@ -3,16 +3,14 @@
 int main()
 {
     ClapTrap c;
-    // c.setHitPoint(0);
-    // c.setEnergyPoints(10);
-    // c.setAttackDamage(17);
-    
-    ClapTrap a = c;
-   // a = c;
-    //std::cout << a.getAttackDamage() << std::endl;
-    // c.setAttackDamage(56);
-   // std::cout << a.getAttackDamage() << std::endl;
+    ClapTrap d("warrior");
+    c = d;
     c.attack("someone");
-    a.attack("someone");
+    c.takeDamage(30);
+    c.beRepaired(50);
+    ClapTrap g(c);
+    g.attack("someone");
+    g.takeDamage(30);
+    g.beRepaired(50);
     return 0;
 }

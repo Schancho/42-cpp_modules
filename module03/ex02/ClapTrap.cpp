@@ -48,7 +48,6 @@ ClapTrap &				ClapTrap::operator=( ClapTrap const & src)
 
 
 
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
