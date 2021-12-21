@@ -17,4 +17,4 @@ fclean: clean
 re: fclean all
 
 run: fclean all
-	@./$(NAME)
+	@./$(NAME)ightmare 
