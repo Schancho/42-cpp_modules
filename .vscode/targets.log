@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
  
 
-# Make data base, printed on Sun Dec 19 18:41:04 2021
+# Make data base, printed on Tue Dec 21 02:13:25 2021
 
 # Variables
 
@@ -39,11 +39,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00004cc000133/T/vscode-ipc-f3a52eb1-2b9e-48ec-b7ef-8da82c5bc900.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00004cc000133/T/vscode-ipc-51c62f12-8842-44ff-ba25-c834436431d1.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.t7bV7cQZql/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.glqIVa3YOY/Render
 # environment
 PATH = /Users/schancho/goinfre/schancho/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
@@ -57,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Q3mcEf8gn1/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.txmibQoEqv/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -121,13 +121,15 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.1188
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0x463:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -136,6 +138,8 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
@@ -147,9 +151,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1404
+VSCODE_PID = 1108
 # variable set hash-table stats:
-# Load=67/1024=7%, Rehash=0, Collisions=1/88=1%
+# Load=69/1024=7%, Rehash=0, Collisions=1/90=1%
 
 # Pattern-specific Variable Values
 
@@ -157,9 +161,9 @@ VSCODE_PID = 1404
 
 # Directories
 
-# . (device 16777227, inode 516540): 10 files, no impossibilities.
+# . (device 16777227, inode 516540): 11 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -231,6 +235,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sun Dec 19 18:41:04 2021
+# Finished Make data base on Tue Dec 21 02:13:25 2021
 
  

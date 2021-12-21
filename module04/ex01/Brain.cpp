@@ -7,7 +7,7 @@
 Brain::Brain()
 {
 
-		for (size_t i = 0; i < 100; i++)
+	for (size_t i = 0; i < 100; i++)
 	{
 		ideas[i] = "idea " + std::to_string(i);
 	}
@@ -36,15 +36,9 @@ Brain::~Brain()
 
 Brain &				Brain::operator=( Brain const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-
-
 	for (size_t i = 0; i < 100; i++)
 	{
-	ideas[i] = rhs.ideas[i];
+		ideas[i] = rhs.ideas[i];
 	}
 	
 	return *this;
@@ -52,7 +46,6 @@ Brain &				Brain::operator=( Brain const & rhs )
 
 std::ostream &			operator<<( std::ostream & o, Brain const & b )
 {
-	// o << "Value = " << i.getValue();
 
 	for (size_t i = 0; i < 100; i++)
 	{

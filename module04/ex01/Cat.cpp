@@ -22,13 +22,8 @@ Cat::~Cat()
 
 Cat &				Cat::operator=( Cat const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
 	_type = rhs._type;
 	this->brain = new Brain();
-	// this->brain = rhs.brain;
 	for (size_t i = 0; i < 100; i++)
 	{
 		this->brain->setIdea(i, rhs.brain->getIdea(i));

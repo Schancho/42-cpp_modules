@@ -15,7 +15,7 @@ class Cat : public Animal
 		Cat( Cat const & src );
 		~Cat();
 
-		Cat &		operator = ( Cat const & rhs ); //
+		Cat &		operator = ( Cat const & rhs );
 
 		Brain *getBrian();
 

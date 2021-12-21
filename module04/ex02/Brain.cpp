@@ -6,7 +6,7 @@
 
 Brain::Brain()
 {
-
+	
 		for (size_t i = 0; i < 100; i++)
 	{
 		ideas[i] = "idea " + std::to_string(i);
