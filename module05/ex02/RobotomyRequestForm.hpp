@@ -12,7 +12,7 @@ class RobotomyRequestForm : public Form
 		RobotomyRequestForm();
 		RobotomyRequestForm( RobotomyRequestForm const & src );
 		~RobotomyRequestForm();
-
+		void execute(Bureaucrat const & executor) const;
 		RobotomyRequestForm &		operator=( RobotomyRequestForm const & rhs );
 
 	private:

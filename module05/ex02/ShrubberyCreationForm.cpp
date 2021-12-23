@@ -17,7 +17,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 {
 	std::string line;
 	std::ifstream f("tree");
-	f.open("trele");
+	//f.open("trele");
 	target.append("_shrubbery");
 	std::ofstream file;
 	file.open(target);
@@ -66,8 +66,11 @@ std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & i )
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+{
+	Form::execute(executor);
 
-
+}
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */

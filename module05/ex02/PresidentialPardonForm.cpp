@@ -4,8 +4,13 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-PresidentialPardonForm::PresidentialPardonForm()
+PresidentialPardonForm::PresidentialPardonForm() : Form("PresidentialPardonForm", 145, 137)
 {
+}
+
+PresidentialPardonForm::PresidentialPardonForm(std::string const & target) : Form("PresidentialPardonForm", 25, 5), target(target)
+{
+
 }
 
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & src )
@@ -45,8 +50,10 @@ std::ostream &			operator<<( std::ostream & o, PresidentialPardonForm const & i 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
 
-
+}
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */

@@ -38,6 +38,8 @@ class Form
 		bool getFormStatus();
 		void	beSigned(Bureaucrat & b);
 
+		void execute(Bureaucrat const & executor) const;
+
 };
 
 std::ostream &			operator<<( std::ostream & o, Form  & i );

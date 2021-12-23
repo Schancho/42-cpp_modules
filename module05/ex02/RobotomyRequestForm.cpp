@@ -1,8 +1,5 @@
 #include "RobotomyRequestForm.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
 RobotomyRequestForm::RobotomyRequestForm()
 {
@@ -12,19 +9,9 @@ RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm & src )
 {
 }
 
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
-
 RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
-
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm const & rhs )
 {
@@ -34,22 +21,13 @@ RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm con
 	//}
 	return *this;
 }
-
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
+	
+}
 std::ostream &			operator<<( std::ostream & o, RobotomyRequestForm const & i )
 {
 	//o << "Value = " << i.getValue();
 	return o;
 }
 
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

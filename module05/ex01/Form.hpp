@@ -9,7 +9,7 @@ class Bureaucrat;
 
 class Form
 {
-	private:
+	protected:
 		std::string const _name;
 		int const _signingGrade;
 		int const _executeGrade;
