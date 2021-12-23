@@ -13,24 +13,9 @@ ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm & src 
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :Form("Shrubbery", 145, 137), _target(target)
 {
-	std::string line;
-	std::ifstream f("tree");
-	f.open("trele");
-	target.append("_shrubbery");
-	std::ofstream file;
-	file.open(target);
-	if (!file.is_open() || !f.is_open())
-    {
-        std::cout << "File error "  << std::endl;
-        exit(1);
-    }
-	while (std::getline(f, line))
-	{
-		file << line << std::endl;
 
-	}
 }
 
 
@@ -67,7 +52,28 @@ std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & i )
 ** --------------------------------- METHODS ----------------------------------
 */
 
-
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+{
+	if (this->status == false)
+		throw notSigned();
+	std::string line;
+	std::ifstream f("tree");
+	//f.open("treee");
+	std::string target(executor.getName());
+	target.append("_shrubbery");
+	std::ofstream file;
+	file.open(target);
+	if (!file.is_open() || !f.is_open())
+    {
+        std::cout << "File error "  << std::endl;
+        exit(1);
+    }
+	while (std::getline(f, line))
+	{
+		file << line << std::endl;
+	}
+	
+}
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */

@@ -9,7 +9,7 @@ class Bureaucrat;
 
 class Form
 {
-	private:
+	protected:
 		std::string const _name;
 		int const _signingGrade;
 		int const _executeGrade;
@@ -32,11 +32,16 @@ class Form
 			const char* what() const throw();
 		
 		};
+		class notSigned : public std::exception
+		{
+			const char* what() const throw();
+		};
 		std::string  getFormName() const;
 		int  getFormSigningGrade() const;
 		int getFormExecuteGrade() const;
 		bool getFormStatus();
 		void	beSigned(Bureaucrat & b);
+		virtual void execute(Bureaucrat const & executor) = 0;
 
 };
 

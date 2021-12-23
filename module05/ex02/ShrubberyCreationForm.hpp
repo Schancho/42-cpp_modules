@@ -5,6 +5,7 @@
 # include <string>
 # include <fstream>
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 class ShrubberyCreationForm : public Form
 {
 
@@ -14,11 +15,11 @@ class ShrubberyCreationForm : public Form
 		ShrubberyCreationForm( ShrubberyCreationForm const & src );
 		ShrubberyCreationForm(std::string target);
 		~ShrubberyCreationForm();
-
+		void execute(Bureaucrat const & executor) const;
 		ShrubberyCreationForm &		operator=( ShrubberyCreationForm const & rhs );
 
 	private:
-
+		std::string _target;
 };
 
 std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & i );
