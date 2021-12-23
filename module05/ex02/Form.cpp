@@ -103,6 +103,11 @@ void	Form::beSigned(Bureaucrat & b)
 	else
 		throw GradeTooLowException();
 }
+
+void Form::execute(Bureaucrat const & executor) const
+{
+	
+}
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */

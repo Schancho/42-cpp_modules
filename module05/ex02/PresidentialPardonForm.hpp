@@ -6,13 +6,15 @@
 #include "Form.hpp"
 class PresidentialPardonForm : public Form
 {
+	std::string target;
 
 	public:
 
 		PresidentialPardonForm();
+		PresidentialPardonForm( std::string const & target );
 		PresidentialPardonForm( PresidentialPardonForm const & src );
 		~PresidentialPardonForm();
-
+		void execute(Bureaucrat const & executor) const;
 		PresidentialPardonForm &		operator=( PresidentialPardonForm const & rhs );
 
 	private:
