@@ -20,7 +20,7 @@ class Form
 		Form();
 		Form(std::string const name, int const sGrade, int const eGrade);
 		Form( Form const & src );
-		~Form();
+		virtual ~Form();
 
 		Form &		operator=( Form const & rhs );
 	class GradeTooHighException: public std::exception

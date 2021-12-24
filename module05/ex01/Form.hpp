@@ -22,7 +22,7 @@ class Form
 		~Form();
 
 		Form &		operator=( Form const & rhs );
-	class GradeTooHighException: public std::exception
+		class GradeTooHighException: public std::exception
 		{
 			const char* what() const throw();
 		
