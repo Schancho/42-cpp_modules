@@ -20,6 +20,4 @@ class RobotomyRequestForm : public Form
 		std::string _target;
 };
 
-
-
-#endif /* ********************************************* ROBOTOMYREQUESTFORM_H */
+#endif

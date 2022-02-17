@@ -15,6 +15,7 @@ RobotomyRequestForm::RobotomyRequestForm( std::string target) :Form("Robot", 72,
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
+	std::cout << "RobotomyRequestForm Destructor!" << std::endl;
 }
 
 RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm const & rhs )
@@ -30,7 +31,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	if (this->status == false)
 		throw notSigned();
 	if (executor.getGrade() > _executeGrade)
-		throw notSigned();
+		throw notExecuted();
 	srand(time(0));
     int rando = rand() % 2;
 	if(rando == 0)

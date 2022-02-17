@@ -1,9 +1,5 @@
 #include "ShrubberyCreationForm.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
 ShrubberyCreationForm::ShrubberyCreationForm()
 {
 	
@@ -17,19 +13,10 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :Form("Shrubber
 {
 }
 
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
-
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
+	std::cout << "ShrubberyCreationForm Destructor!" << std::endl;
 }
-
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 ShrubberyCreationForm &		ShrubberyCreationForm::operator=( ShrubberyCreationForm const & rhs )
 {
@@ -39,10 +26,6 @@ ShrubberyCreationForm &		ShrubberyCreationForm::operator=( ShrubberyCreationForm
 	}
 	return *this;
 }
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
@@ -55,14 +38,12 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
 	std::string line;
 	std::ifstream f("tree");
-	//f.open("treee");
 	std::string target(this->_target);
 	target.append("_shrubbery");
 	std::ofstream file;
 	file.open(target);
-	if (file.is_open() )//|| !f.is_open())
+	if (file.is_open() )
     {
-        // std::cout << "File error "  << std::endl;
 		file << "		                      ___"<<std::endl;
 		file << "                _,-'""   """"`--."<<std::endl;
 		file << "             ,-'          __,,--  "<<std::endl;
@@ -92,9 +73,3 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	file.close();
 	executor.executeForm(*this);
 }
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

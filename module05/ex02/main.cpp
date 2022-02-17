@@ -9,31 +9,32 @@ int main()
 
     try
     {
-        Bureaucrat a("A", 137);
-        Bureaucrat b("B", 7);
+        Bureaucrat a("A", 5);
+        //Bureaucrat b("B", 139);
 
-        ShrubberyCreationForm s("S");
-        // PresidentialPardonForm p("P");
-        // RobotomyRequestForm r("R");
-
-        // p.beSigned(a);
-        s.beSigned(a);
-        // r.beSigned(a);
-
-        a.signForm(s);
-       // a.signForm(r);
-
-       // a.signForm(p);
-        
-        s.execute(a);
-        // p.execute(a);
-        // r.execute(a);
-
-        // r.beSigned(a);
-        // r.execute(a);
-        
+        //ShrubberyCreationForm s("Home");
+        PresidentialPardonForm p("President");
+        //RobotomyRequestForm r("Robot");
+        PresidentialPardonForm l = p ;
+        l.beSigned(a);
+        std::cout << p ;
+        l.execute(a);
+        // a.signForm(p);
         // s.beSigned(a);
-        // s.execute(a);
+        // r.beSigned(a);
+
+    //     a.signForm(s);
+    //     a.signForm(r);
+
+        
+    //     s.execute(a);
+    //     r.execute(a);
+
+    //     r.beSigned(a);
+    //     r.execute(a);
+        
+    //     s.beSigned(a);
+    //     s.execute(a);
 
         //Bureaucrat x("B", 700);
     }

@@ -44,16 +44,12 @@ class Form
 		std::string  getFormName() const;
 		int  getFormSigningGrade() const;
 		int getFormExecuteGrade() const;
-		bool getFormStatus();
+		bool getFormStatus() const;
 		void	beSigned(Bureaucrat & b);
 		virtual void execute(Bureaucrat const & executor) const = 0;
-
-		// std::ostream &			operator<<( std::ostream & o, Form  & i );
-
-		//void execute(Bureaucrat const & executor) const;
 
 };
 
 std::ostream &			operator<<( std::ostream & o, Form  & i );
 
-#endif /* ************************************************************ FORM_H */
+#endif

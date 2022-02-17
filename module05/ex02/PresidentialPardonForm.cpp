@@ -1,33 +1,24 @@
 #include "PresidentialPardonForm.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
 PresidentialPardonForm::PresidentialPardonForm()
 {
+
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string const & target) : Form("PresidentialPardonForm", 25, 5), target(target)
+PresidentialPardonForm::PresidentialPardonForm(std::string const & target) : Form("PresidentialPardonForm", 25, 5), _target(target)
 {
 
 }
 
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & src )
 {
+	*this = src;
 }
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
+	std::cout << "PresidentialPardonForm Destructor!" << std::endl;
 }
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 PresidentialPardonForm &		PresidentialPardonForm::operator=( PresidentialPardonForm const & rhs )
 {
@@ -38,22 +29,12 @@ PresidentialPardonForm &		PresidentialPardonForm::operator=( PresidentialPardonF
 	return *this;
 }
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
 	if (this->status == false)
 		throw notSigned();
 	if (executor.getGrade() > _executeGrade)
-		throw notSigned();
+		throw notExecuted();
 	std::cout << this->_target << " has been pardoned by Zafod Beeblebrox" << std::endl;
 	executor.executeForm(*this);
 }
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

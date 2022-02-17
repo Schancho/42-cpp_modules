@@ -35,10 +35,8 @@ class Bureaucrat
 		void	signForm(Form& src);
 		void 	executeForm(Form const & form) const;
 		Bureaucrat &		operator=( Bureaucrat const & rhs );
-
-
 };
 
 std::ostream &			operator<<( std::ostream & o, Bureaucrat  & i );
 
-#endif /* ****************************************************** BUREAUCRAT_H */
+#endif

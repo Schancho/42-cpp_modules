@@ -23,5 +23,4 @@ class ShrubberyCreationForm : public Form
 		std::string _target;
 };
 
-
-#endif /* ******************************************* SHRUBBERYCREATIONFORM_H */
+#endif

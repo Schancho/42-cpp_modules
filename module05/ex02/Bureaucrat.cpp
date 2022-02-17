@@ -1,11 +1,8 @@
 #include "Bureaucrat.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
 Bureaucrat::Bureaucrat()
 {
+	std::cout << "Bureaucrat Default constructor!" << std::endl;
 }
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
@@ -27,21 +24,12 @@ void Bureaucrat::signForm(Form& src)
 		std::cout << this->_name << " signs " << src.getFormName() << std::endl;
 	else
 		std::cout << this->_name << " cannot signs " << src.getFormName() <<" because garde is to low"<<std::endl;
-
-
 }
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 Bureaucrat::~Bureaucrat()
 {
+	std::cout << "Bureaucrat Destructor!" << std::endl;
 }
-
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 Bureaucrat &				Bureaucrat::operator=( Bureaucrat const & src )
 {
@@ -55,10 +43,6 @@ std::ostream &			operator<<( std::ostream & o, Bureaucrat & i )
 	o << i.getName() << ", bureaucrat grade " << i.getGrade() << std::endl;
 	return o;
 }
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
@@ -81,17 +65,14 @@ std::string Bureaucrat::getName() const
 
 void Bureaucrat::incrementGrade()
 {
-	//if (this->_grade == 1)
-	//	throw GradeTooHighException();
 	this->_grade--;
 	if (this->_grade < 1)
 		throw GradeTooHighException();
 
 }
+
 void Bureaucrat::decrementGrade()
 {
-	//if(this->_grade == 150)
-	//	throw GradeTooLowException();
 	this->_grade++;
 	if (this->_grade > 150)
 		throw GradeTooLowException();
@@ -99,11 +80,8 @@ void Bureaucrat::decrementGrade()
 
 void 	Bureaucrat::executeForm(Form const & form) const
 {
-	std::cout << this->getName() << " executes " << form.getFormName() << std::endl;
+	if (form.getFormStatus() && this->_grade <= form.getFormExecuteGrade())
+		std::cout << this->getName() << " executed " << form.getFormName() << std::endl;
+	else
+		std::cout << this->getName() << " not executed " << form.getFormName() << std::endl;
 }
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

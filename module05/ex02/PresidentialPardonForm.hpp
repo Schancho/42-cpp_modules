@@ -6,8 +6,6 @@
 #include "Form.hpp"
 class PresidentialPardonForm : public Form
 {
-	std::string target;
-
 	public:
 
 		PresidentialPardonForm();
@@ -21,7 +19,6 @@ class PresidentialPardonForm : public Form
 		std::string _target;
 };
 
-
 std::ostream &			operator<<( std::ostream & o, PresidentialPardonForm const & i );
 
-#endif /* ****************************************** PRESIDENTIALPARDONFORM_H */
+#endif
