@@ -24,10 +24,10 @@ Animal &				Animal::operator=( Animal const & src )
 }
 
 
-// void Animal::makeSound() const
-// {
-// 	std::cout << "ANIMAL is making a sound!" << std::endl;
-// }
+void Animal::makeSound() const
+{
+	std::cout << "ANIMAL is making a sound!" << std::endl;
+}
 
 void Animal::setType(std::string type)
 {

@@ -19,26 +19,12 @@ Form::Form( const Form & src ) : _signingGrade(0), _executeGrade(0), status(fals
 	this->status = src.status;
 }
 
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
-
 Form::~Form()
 {
 }
 
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
 Form &				Form::operator=( Form const & src )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
 	this->status = src.status;
 	return *this;
 }
@@ -51,11 +37,6 @@ std::ostream &			operator<<( std::ostream & o, Form  & i )
 	o << "status: "<< ((i.getFormStatus()) ? " Signed": " Not Signed") << std::endl;
 	return o;
 }
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
 
 const char* Form::GradeTooHighException::what() const throw()
 {

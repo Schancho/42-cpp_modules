@@ -7,6 +7,7 @@ RobotomyRequestForm::RobotomyRequestForm()
 
 RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm & src )
 {
+	(void)src;
 }
 
 RobotomyRequestForm::RobotomyRequestForm( std::string target) :Form("Robot", 72, 45), _target(target)
@@ -28,9 +29,9 @@ RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm con
 }
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-	if (this->status == false)
+	if (this->getFormStatus() == false)
 		throw notSigned();
-	if (executor.getGrade() > _executeGrade)
+	if (executor.getGrade() > getFormExecuteGrade())
 		throw notExecuted();
 	srand(time(0));
     int rando = rand() % 2;
@@ -43,3 +44,12 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 		std::cout << _target << " Failure!" << std::endl;
 }
 
+
+std::ostream &			operator<<( std::ostream & o, RobotomyRequestForm const & i )
+{
+	o << "Name: " + i.getFormName() <<std::endl;
+	o << "Sgrade: " << i.getFormSigningGrade() <<std::endl;
+	o << "Egrade: " << i.getFormExecuteGrade() <<std::endl;
+	o << "status: "<< ((i.getFormStatus()) ? " Signed": " Not Signed") << std::endl;
+	return o;
+}

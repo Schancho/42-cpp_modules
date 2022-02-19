@@ -1,6 +1,6 @@
 NAME	= Intern
 CC		= clang++ --std=c++98 
-FLAGS	= #-Wall -Werror -Wextra
+FLAGS	= -Wall -Werror -Wextra
 SRCS 	= Bureaucrat.cpp Form.cpp main.cpp Intern.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp
 
 $(NAME):

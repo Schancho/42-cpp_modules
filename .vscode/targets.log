@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
  
 
-# Make data base, printed on Fri Dec 24 11:09:06 2021
+# Make data base, printed on Sat Feb 19 12:16:56 2022
 
 # Variables
 
@@ -39,11 +39,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00004cc000133/T/vscode-ipc-51948a23-f297-47c9-83eb-757cd533218d.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00004cc000133/T/vscode-ipc-bcf1774c-0781-42cf-bb07-1d088e2aea33.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.bwR1caVuN2/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.TvgtDF3RsD/Render
 # environment
 PATH = /Users/schancho/goinfre/schancho/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
@@ -57,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1kFrdx47Bm/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.QEHi0m3vvX/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -73,11 +73,11 @@ HOME = /Users/schancho
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/schancho/Library/Application Support/Code/CachedData/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247
+VSCODE_CODE_CACHE_PATH = /Users/schancho/Library/Application Support/Code/CachedData/f80445acd5a3dadef24aa209168452a3d97cc326
 # environment
 LOGNAME = schancho
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/schancho/.oh-my-zsh
 # environment
@@ -113,7 +113,7 @@ TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n00004cc000133/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/schancho/Library/Application Support/Code/1.62.3-main.sock
+VSCODE_IPC_HOOK = /Users/schancho/Library/Application Support/Code/1.64.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -121,13 +121,15 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.1168
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0x463:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -136,6 +138,8 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
@@ -147,9 +151,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 48654
+VSCODE_PID = 15040
 # variable set hash-table stats:
-# Load=67/1024=7%, Rehash=0, Collisions=1/88=1%
+# Load=69/1024=7%, Rehash=0, Collisions=1/90=1%
 
 # Pattern-specific Variable Values
 
@@ -231,6 +235,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri Dec 24 11:09:06 2021
+# Finished Make data base on Sat Feb 19 12:16:56 2022
 
  

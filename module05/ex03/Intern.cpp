@@ -1,12 +1,37 @@
 
 #include "Intern.hpp"
 
+Intern::Intern()
+{
+    std::cout << "Intern constructor" << std::endl;
+}
+
+Intern::Intern(Intern const &src)
+{
+    *this = src;
+}
+
+Intern::~Intern()
+{
+    std::cout << "Intern destructor" << std::endl;
+}
+
+Intern &Intern::operator=(Intern const &rhs)
+{
+    if (this != &rhs)
+    {
+        std::cout << "Intern assignment operator" << std::endl;
+    }
+    return *this;
+}
+
+
 typedef struct s_form {
     std::string type;
-    Form* f;
+    Form        *f;
 }               t_form;
 
-Form& Intern::makeForm(std::string req, std::string x)
+Form *Intern::makeForm(std::string req, std::string x)
 {
     Form* result = 0;
 
@@ -24,10 +49,10 @@ Form& Intern::makeForm(std::string req, std::string x)
     if (result)
     {
         std::cerr << "Intern creates " << result->getFormName() << std::endl;
-        return (*result);
+        return (result);
     }
     else
-        std::cerr << "Intern counldn't creates " <<  std::endl;
-    return *result;
+        std::cerr << "Intern counldn't create " <<  std::endl;
+    return result;
 
 }

@@ -5,12 +5,13 @@ int main()
 {
     try
     {
-        /* code */
-        Bureaucrat x("xxxx", 90);
-        Form c("Forma", 100, 140);
-        // std::cout << x
-        // c.beSigned(x);
+        
+        Bureaucrat x("xxxx", 80);
+        Form c("Forma", 100, 90);
+        std::cout << x;
+        c.beSigned(x);
         std::cout << c;
+        x.signForm(c);
     }
     catch(const std::exception& e)
     {

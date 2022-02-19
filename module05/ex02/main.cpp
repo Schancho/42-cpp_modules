@@ -1,42 +1,36 @@
+
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
-// 
+
 int main()
 {
-
     try
     {
-        Bureaucrat a("A", 5);
-        //Bureaucrat b("B", 139);
+        Bureaucrat bureau_a("Bureau_A", 1);
+        Bureaucrat bureau_b("Bureau_B", 7);
 
-        //ShrubberyCreationForm s("Home");
-        PresidentialPardonForm p("President");
-        //RobotomyRequestForm r("Robot");
-        PresidentialPardonForm l = p ;
-        l.beSigned(a);
-        std::cout << p ;
-        l.execute(a);
-        // a.signForm(p);
-        // s.beSigned(a);
-        // r.beSigned(a);
+        ShrubberyCreationForm shru("Shru");
+        PresidentialPardonForm presd("Presd");
+        RobotomyRequestForm robo("Robo");
 
-    //     a.signForm(s);
-    //     a.signForm(r);
 
-        
-    //     s.execute(a);
-    //     r.execute(a);
+        bureau_b.signForm(shru);
+        bureau_b.signForm(robo);
+        bureau_b.signForm(presd);
 
-    //     r.beSigned(a);
-    //     r.execute(a);
-        
-    //     s.beSigned(a);
-    //     s.execute(a);
+        presd.beSigned(bureau_b);
+        shru.beSigned(bureau_b);
+        robo.beSigned(bureau_b);
 
-        //Bureaucrat x("B", 700);
+        shru.execute(bureau_b);
+        presd.execute(bureau_b);
+        robo.execute(bureau_b);
+
+        std::cout << "############" << std::endl;
+        Bureaucrat failure("B", 7000);
     }
     catch (std::exception &e)
     {
@@ -45,9 +39,3 @@ int main()
 
     return 0;
 }
-// srabd(0);
-// int rando = rand() % 2 + 1;
-// if (rand == 1)
-// std::cout<< 
-// else
-//     std::cout<<"failure"<<std::endl

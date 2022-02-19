@@ -6,9 +6,11 @@
 
 class Intern
 {
-
     public:
-        Form &    makeForm(std::string, std::string);
-        // Intern(/* args */);
-        // ~Intern();
+        Intern();
+        Intern(Intern const &);
+        Intern & operator=(Intern const &);
+        ~Intern();
+        Form *makeForm(std::string, std::string);
+
 };

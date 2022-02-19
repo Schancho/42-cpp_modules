@@ -1,9 +1,5 @@
 #include "ShrubberyCreationForm.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
 ShrubberyCreationForm::ShrubberyCreationForm()
 {
 	
@@ -11,25 +7,17 @@ ShrubberyCreationForm::ShrubberyCreationForm()
 
 ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm & src )
 {
+	(void)src;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :Form("Shrubbery", 145, 137), _target(target)
 {
 }
 
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
-
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
+	std::cout << "ShrubberyCreationForm Destructor!" << std::endl;
 }
-
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 ShrubberyCreationForm &		ShrubberyCreationForm::operator=( ShrubberyCreationForm const & rhs )
 {
@@ -40,29 +28,21 @@ ShrubberyCreationForm &		ShrubberyCreationForm::operator=( ShrubberyCreationForm
 	return *this;
 }
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	if (this->status == false)
+	if (this->getFormStatus() == false)
 		throw notSigned();
-	if(executor.getGrade() > _executeGrade)
-	{
+	if (executor.getGrade() > getFormExecuteGrade())
 		throw notExecuted();
-	}
 
 	std::string line;
 	std::ifstream f("tree");
-	//f.open("treee");
 	std::string target(this->_target);
 	target.append("_shrubbery");
 	std::ofstream file;
 	file.open(target);
-	if (file.is_open() )//|| !f.is_open())
+	if (file.is_open() )
     {
-        // std::cout << "File error "  << std::endl;
 		file << "		                      ___"<<std::endl;
 		file << "                _,-'""   """"`--."<<std::endl;
 		file << "             ,-'          __,,--  "<<std::endl;
@@ -92,9 +72,12 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	file.close();
 	executor.executeForm(*this);
 }
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
 
-
-/* ************************************************************************** */
+std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & i )
+{
+	o << "Name: " + i.getFormName() <<std::endl;
+	o << "Sgrade: " << i.getFormSigningGrade() <<std::endl;
+	o << "Egrade: " << i.getFormExecuteGrade() <<std::endl;
+	o << "status: "<< ((i.getFormStatus()) ? " Signed": " Not Signed") << std::endl;
+	return o;
+}

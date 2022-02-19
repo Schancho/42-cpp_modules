@@ -9,7 +9,7 @@ class Form;
 class Bureaucrat
 {
 	private:
-		int _grade;
+		int const _grade;
 		std::string _name;
 	public:
 
@@ -35,10 +35,8 @@ class Bureaucrat
 		void	signForm(Form& src);
 		void 	executeForm(Form const & form) const;
 		Bureaucrat &		operator=( Bureaucrat const & rhs );
-
-
 };
 
 std::ostream &			operator<<( std::ostream & o, Bureaucrat  & i );
 
-#endif /* ****************************************************** BUREAUCRAT_H */
+#endif

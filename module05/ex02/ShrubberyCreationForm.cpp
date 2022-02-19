@@ -7,6 +7,7 @@ ShrubberyCreationForm::ShrubberyCreationForm()
 
 ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm & src )
 {
+	(void)src;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :Form("Shrubbery", 145, 137), _target(target)
@@ -29,12 +30,10 @@ ShrubberyCreationForm &		ShrubberyCreationForm::operator=( ShrubberyCreationForm
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	if (this->status == false)
+	if (this->getFormStatus() == false)
 		throw notSigned();
-	if(executor.getGrade() > _executeGrade)
-	{
+	if (executor.getGrade() > getFormExecuteGrade())
 		throw notExecuted();
-	}
 
 	std::string line;
 	std::ifstream f("tree");
@@ -72,4 +71,13 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     }
 	file.close();
 	executor.executeForm(*this);
+}
+
+std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & i )
+{
+	o << "Name: " + i.getFormName() <<std::endl;
+	o << "Sgrade: " << i.getFormSigningGrade() <<std::endl;
+	o << "Egrade: " << i.getFormExecuteGrade() <<std::endl;
+	o << "status: "<< ((i.getFormStatus()) ? " Signed": " Not Signed") << std::endl;
+	return o;
 }

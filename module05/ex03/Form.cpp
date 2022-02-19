@@ -1,8 +1,5 @@
 #include "Form.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 Form::Form(std::string const name, int const sGrade, int const eGrade) :_name(name), _signingGrade(sGrade), _executeGrade(eGrade), status(false)
 {
 	if (sGrade < 1 || eGrade < 1)
@@ -19,19 +16,10 @@ Form::Form( const Form & src ) : _signingGrade(0), _executeGrade(0), status(fals
 	this->status = src.status;
 }
 
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
-
 Form::~Form()
 {
+	std::cout << "Form Destructor!" << std::endl;
 }
-
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
 Form &				Form::operator=( Form const & src )
 {
@@ -47,11 +35,6 @@ std::ostream &			operator<<( std::ostream & o, Form  & i )
 	o << "status: "<< ((i.getFormStatus()) ? " Signed": " Not Signed") << std::endl;
 	return o;
 }
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
 
 const char* Form::GradeTooHighException::what() const throw()
 {
@@ -87,7 +70,7 @@ int Form::getFormExecuteGrade() const
 	return this->_executeGrade;
 }
 
-bool Form::getFormStatus()
+bool Form::getFormStatus() const
 {
 	return this->status;
 }
@@ -103,10 +86,3 @@ void	Form::beSigned(Bureaucrat & b)
 	else
 		throw GradeTooLowException();
 }
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

@@ -4,8 +4,7 @@ int main()
 {
     try
     {
-        /* code */
-        Bureaucrat x("xxxx", 100);
+        Bureaucrat x("bureau", 160);
         std::cout << x;
     }
     catch(const std::exception& e)

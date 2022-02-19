@@ -1,7 +1,7 @@
-NAME	= target
+NAME	= static
 CC		= clang++ --std=c++98 
 FLAGS	= -Wall -Werror -Wextra
-SRCS 	= Bureaucrat.cpp Form.cpp main.cpp  ShrubberyCreationForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp
+SRCS 	= main.cpp 
 
 $(NAME):
 	@$(CC) $(FLAGS) $(SRCS) -o $(NAME)

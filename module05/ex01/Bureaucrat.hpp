@@ -10,7 +10,7 @@ class Bureaucrat
 {
 	private:
 		int _grade;
-		std::string _name;
+		std::string const _name;
 	public:
 
 		Bureaucrat();
