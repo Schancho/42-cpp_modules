@@ -1,7 +1,8 @@
-NAME	= static
+
+NAME	= span
 CC		= clang++ --std=c++98 
 FLAGS	= -Wall -Werror -Wextra
-SRCS 	= main.cpp 
+SRCS 	= main.cpp Span.cpp
 
 $(NAME): $(SRCS)
 	@$(CC) $(FLAGS) $(SRCS) -o $(NAME)
@@ -12,9 +13,9 @@ clean:
 	@rm -rf *.o
 
 fclean: clean
-	@rm -rf $(NAME)
+	@rm -rf $(NAME) *.dSYM *.out
 
 re: fclean all
 
-run: fclean all
+run: re
 	@./$(NAME)

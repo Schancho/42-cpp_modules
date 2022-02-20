@@ -6,7 +6,7 @@ SRCS 	= main.cpp
 $(NAME):
 	@$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
-all: $(NAME)
+all: $(NAME) $(SRCS)
 
 clean:
 	@rm -rf *.o

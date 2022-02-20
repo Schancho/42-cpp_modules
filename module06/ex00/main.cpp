@@ -17,7 +17,7 @@ bool isvalid(std::string& str)
 }
 
 int main(int ac, char** argv)
-{
+{  
     bool flag = false;
 
     if (ac != 2)
@@ -43,14 +43,14 @@ int main(int ac, char** argv)
     else
     {
 
-        if (isprint(c)) // 32 to 126 
+        if (isprint(c)) 
             std::cout << "char: "<< c << std::endl;
         else
             std::cout << "char: Non displayable" << std::endl;
         std::cout << "int: "<< a << std::endl;
     }
 
-    std::cout << "float: "<< std::fixed << std::setprecision(1) << b << "f" << std::endl;
+    std::cout << "float: " << std::fixed << std::setprecision(1) << b << "f" << std::endl;
     std::cout << "double: "<< b << std::endl;
 
     return 0;

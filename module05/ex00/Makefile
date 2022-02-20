@@ -3,7 +3,7 @@ CC		= clang++ --std=c++98
 FLAGS	= -Wall -Werror -Wextra
 SRCS 	= Bureaucrat.cpp main.cpp 
 
-$(NAME):
+$(NAME): $(SRCS) 
 	@$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 all: $(NAME)
